@@ -36,27 +36,15 @@ document.getElementById("username").innerText = localStorage.getItem("username")
 document.getElementById("score").innerText = localStorage.getItem("score");
 document.getElementById("myImage").src = localStorage.getItem("myImage");
 
+function shuffle(list) {
+    return Array.from(list).sort((a, b) => 0.5 - Math.random());
+}
+
 function populateAnswers(song) {
+    const shuffledSongs = shuffle(songs.filter(other => other != song))
+    const answers = shuffle(shuffledSongs.slice(-3).concat([song]))
 
-    const randomanswer = Math.floor(Math.random() * answerButtons.length);
-
-    Array.from(answerButtons).forEach((button, i) => {
-        if (randomanswer == i) {
-            button.innerText = song;
-        } else {
-            const wronganswer = Math.floor(Math.random() * answerButtons.length);
-            button.innerText = songs[wronganswer];
-            // let a = 0;
-            // while (a < 1) {
-            // const wronganswer = Math.floor(Math.random() * answerButtons.length);
-            // if (randomanswer != wronganswer) {
-            // button.innerText = songs[wronganswer];
-            // i++;
-            // } else{}
-            // } 
-        }
-    })
-
+    Array.from(answerButtons).forEach(button => { button.innerText = answers.pop() })
 }
 
 function levelcorrect(givenAnswer) {

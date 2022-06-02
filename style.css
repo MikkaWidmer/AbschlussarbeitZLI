@@ -253,6 +253,7 @@ img.track {
 }
 
 .music-container {
+    margin-left: 105px;
     height: 230px;
     background-color: rgba(0, 0, 0, 0.8);
     width: 400px;
