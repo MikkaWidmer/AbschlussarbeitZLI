@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
     background-image: url(./images/fdAPqM.jpg);
     background-size: cover;
@@ -272,6 +275,7 @@ img.track {
 
 .answer {
     border-radius: 10px;
+    border: none;
     height: 50px;
     width: 30vw;
 }
@@ -354,4 +358,42 @@ img.track {
     width: 100px;
     display: flex;
     flex-direction: column;
+}
+
+.congratfield{
+    background-color: #6a4c29d9;
+    border-radius: 20px;
+    flex-direction: column;
+    height: 60vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.congratfield p{
+    font-size: 40px;
+    color: white;
+    height: 10vh;
+    text-shadow: 1vh 1vh 2vh black;
+}
+
+#gapbtn{
+    margin-bottom: 4vh;
+}
+
+.congratfield button{
+    cursor: pointer;
+    border: none;
+    height: 10vh;
+    width: 40vw;
+    border-radius: 15px;
+}
+
+.correctanswer{
+    background-color: #28b348;
+}
+
+.wronganswer{
+    background-color: red;
 }

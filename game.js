@@ -13,7 +13,7 @@ const durTime = document.querySelector('#durTime');
 let answerButtons = document.getElementsByClassName("answer");
 
 for (let button of answerButtons) {
-    button.addEventListener("click", (event) => levelcorrect(event.target.innerText))
+    button.addEventListener("click", (event) => levelcorrect(event.target))
 }
 
 const songs = [
@@ -47,11 +47,33 @@ function populateAnswers(song) {
     Array.from(answerButtons).forEach(button => { button.innerText = answers.pop() })
 }
 
-function levelcorrect(givenAnswer) {
-    if (givenAnswer == currentSong) {
+let timeout;
+
+function wait() {
+  timeout = setTimeout(gonextlvl, 300);
+}
+
+function waitwrong() {
+    timeout = setTimeout(wronganswer, 300);
+  }
+
+function gonextlvl() {
+    window.location = "./game.html"
+}
+
+function wronganswer(){
+    window.location ="./congrats.html"
+}
+
+function levelcorrect(pressedButton) {
+    if (pressedButton.innerText == currentSong) {
         let score = document.getElementById("score").innerText = localStorage.getItem("score");
         localStorage.setItem("score", Number(score) + 1);
-        window.location = "./game.html"
+        pressedButton.classList.add("correctanswer")
+        wait()
+    } else {
+        pressedButton.classList.add("wronganswer")
+        waitwrong()
     }
 }
 
