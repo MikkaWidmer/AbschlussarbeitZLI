@@ -162,7 +162,7 @@ img.track {
 .landingPagegame {
     display: flex;
     justify-content: flex-start;
-    gap: 17.5vw;
+    gap: 125px;
     align-items: center;
     height: 50vh;
     flex-direction: row;
@@ -212,7 +212,7 @@ img.track {
 
 #username{
     height: 30px;
-    width: 195px;
+    width: 100px;
     padding: 5px 0px 5px 5px;
     margin: 0px 0px 5px 0px;
     border-radius: 10px;
