@@ -30,10 +30,14 @@ function saveuserinput() {
   const username = document.getElementById("username").value
   const myImage = document.getElementById("myImage").src
   const score = 0;
+  if (username == "") {
+    alert("!sie müssen einen Username wählen")
+  } else {
   localStorage.setItem("score", score);
   localStorage.setItem("myImage", myImage)
   localStorage.setItem("username", username);
   window.location = "./game.html"
+  }
 }
 
 function loadSong(song) {
