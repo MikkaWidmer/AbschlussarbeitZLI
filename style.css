@@ -278,7 +278,8 @@ img.track {
     border-radius: 10px;
     border: none;
     height: 50px;
-    width: 30vw;
+    width: 48vw;
+    max-width: 400px;
 }
 
 .answer ::after{
@@ -400,5 +401,24 @@ img.track {
 }
 
 @media (max-width: 600px) {
-    
+    .center{
+        display: flex;
+        flex-direction: column;
+    }
+    .answer{
+        width: 98%;
+        max-width: 98%;
+    }
+    .landingPagegame{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .music-container{
+        width: 98%;
+        margin-top: 20vh;
+    }
+    .points{
+        display: none;
+    }
 }
