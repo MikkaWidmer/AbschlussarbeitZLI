@@ -413,12 +413,17 @@ img.track {
         display: flex;
         flex-direction: column;
         gap: 0;
+        padding-top: 20vh;
+        padding-bottom: 0;
+        height: 30vh;
     }
     .music-container{
         width: 98%;
-        margin-top: 20vh;
     }
     .points{
         display: none;
+    }
+    .usernameinput{
+        margin-top: 40vh;
     }
 }
