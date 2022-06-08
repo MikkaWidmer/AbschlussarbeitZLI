@@ -58,7 +58,7 @@ function waitwrong() {
   }
 
 function gonextlvl() {
-    window.location = "../hiphop.html"
+    window.location = "./hiphop.html"
 }
 
 function wronganswer(){

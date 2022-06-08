@@ -58,7 +58,7 @@ function waitwrong() {
   }
 
 function gonextlvl() {
-    window.location = "../rap.html"
+    window.location = "./rap.html"
 }
 
 function wronganswer(){

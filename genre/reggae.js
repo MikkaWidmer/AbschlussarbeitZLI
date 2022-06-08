@@ -58,7 +58,7 @@ function waitwrong() {
   }
 
 function gonextlvl() {
-    window.location = "../reggae.html"
+    window.location = "./reggae.html"
 }
 
 function wronganswer(){
