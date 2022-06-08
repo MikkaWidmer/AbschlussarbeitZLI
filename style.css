@@ -223,8 +223,6 @@ img.track {
     border: 0;
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
-    -webkit-transition: all .2s;
-    transition: all .2s;
 }
 
 .userimg button{
