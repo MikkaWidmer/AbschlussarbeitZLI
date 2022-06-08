@@ -24,14 +24,29 @@ const rap = [
     'LCone - Chueche feat. Mimiks',
     'Gascho Prix Nachtverbindig'
 ];
+
+const pop = [
+    "pop song 1",
+    "pop song 2",
+    "pop song 3",
+    "pop song 4",
+    "pop song 5",
+    "pop song 6",
+    "pop song 7",
+    "pop song 8"
+];
+
 let mode = localStorage.getItem("mode");
 let songs;
 let folder;
 
 function levelsongs(){
     debugger
-    if(mode=1){
+    if(mode=="1"){
         songs = rap
+        folder = rap
+    } else if(mode=="2"){
+        songs = pop
     }
 }
 levelsongs()
@@ -89,7 +104,7 @@ function levelcorrect(pressedButton) {
 
 function loadSong(song, folder) {
     title.innerText = "Wie heisst dieser Song?";
-    audio.src = `./music/${song}.mp3`;
+    audio.src = `./${folder}/${song}.mp3`;
     cover.src = `./images/fragezeichen.jpg`;
 }
 
@@ -108,31 +123,6 @@ function pauseSong() {
 
     audio.pause();
 }
-
-function prevSong() {
-    songIndex--;
-
-    if (songIndex < 0) {
-        songIndex = songs.length - 1;
-    }
-
-    loadSong(songs[songIndex]);
-
-    playSong();
-}
-
-function nextSong() {
-    songIndex++;
-
-    if (songIndex > songs.length - 1) {
-        songIndex = 0;
-    }
-
-    loadSong(songs[songIndex]);
-
-    playSong();
-}
-
 function updateProgress(e) {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
@@ -160,5 +150,3 @@ playBtn.addEventListener('click', () => {
 audio.addEventListener('timeupdate', updateProgress);
 
 progressContainer.addEventListener('click', setProgress);
-
-audio.addEventListener('ended', nextSong);
