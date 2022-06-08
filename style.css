@@ -453,9 +453,6 @@ img.track {
     .music-container{
         width: 98%;
     }
-    .points{
-        display: none;
-    }
     .usernameinput{
         margin-top: 40vh;
     }
@@ -483,5 +480,11 @@ img.track {
     }
     .gamebtn{
         margin-bottom: 1vh;
+    }
+    .landingPagegame{
+        flex-direction: column;
+        padding-top: 10vh;
+        height: 47vh;
+        gap: 5px;
     }
 }
