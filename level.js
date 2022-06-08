@@ -2,7 +2,6 @@ const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
-
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
@@ -16,7 +15,7 @@ for (let button of answerButtons) {
     button.addEventListener("click", (event) => levelcorrect(event.target))
 }
 
-const songs = [
+const rap = [
     'Juice WRLD Ft Benny Blanco - Real Shit',
     'Lil Baby, Lil Durk ft Rodwave - Rich Off Pain',
     'Polo G – I Know',
@@ -25,7 +24,16 @@ const songs = [
     'LCone - Chueche feat. Mimiks',
     'Gascho Prix Nachtverbindig'
 ];
+let songs;
+let folder;
 
+function levelsongs(){
+    if(mode=1){
+        songs = rap
+        folder = rap
+    }
+}
+levelsongs()
 const songIndex = Math.floor(Math.random() * songs.length);
 const currentSong = songs[songIndex]
 
@@ -35,6 +43,7 @@ populateAnswers(currentSong);
 document.getElementById("username").innerText = localStorage.getItem("username");
 document.getElementById("score").innerText = localStorage.getItem("score");
 document.getElementById("myImage").src = localStorage.getItem("myImage");
+document.getElementById("mode").innerText = localStorage.getItem("mode");
 
 function shuffle(list) {
     return Array.from(list).sort((a, b) => 0.5 - Math.random());
@@ -50,19 +59,19 @@ function populateAnswers(song) {
 let timeout;
 
 function wait() {
-  timeout = setTimeout(gonextlvl, 300);
+    timeout = setTimeout(gonextlvl, 300);
 }
 
 function waitwrong() {
     timeout = setTimeout(wronganswer, 300);
-  }
+}
 
 function gonextlvl() {
     location.reload();
 }
 
-function wronganswer(){
-    window.location ="../congrats.html"
+function wronganswer() {
+    window.location = "./congrats.html"
 }
 
 function levelcorrect(pressedButton) {
@@ -79,8 +88,8 @@ function levelcorrect(pressedButton) {
 
 function loadSong(song) {
     title.innerText = "Wie heisst dieser Song?";
-    audio.src = `../music/${song}.mp3`;
-    cover.src = `../images/fragezeichen.jpg`;
+    audio.src = `./${folder}/${song}.mp3`;
+    cover.src = `./images/fragezeichen.jpg`;
 }
 
 function playSong() {

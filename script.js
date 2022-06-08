@@ -30,17 +30,18 @@ loadSong(songs[songIndex]);
 let hrefTo = "";
 
 function chooseMode(mode) {
+  localStorage.setItem("mode", mode);
   if (mode == "1") {
-    hrefTo = "./genre/rap.html"
+    hrefTo = "./genre/game.html"
     localStorage.setItem("hrefTo", hrefTo);
   } else if (mode == "2") {
-    hrefTo = "./genre/hiphop.html"
+    hrefTo = "./genre/game.html"
     localStorage.setItem("hrefTo", hrefTo);
   } else if (mode == "3") {
-    hrefTo = "./genre/reggae.html"
+    hrefTo = "./genre/game.html"
     localStorage.setItem("hrefTo", hrefTo);
   } else if (mode == "4") {
-    hrefTo = "./genre/charts.html"
+    hrefTo = "./genre/game.html"
     localStorage.setItem("hrefTo", hrefTo);
   }
 }
