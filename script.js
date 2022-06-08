@@ -10,6 +10,8 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
+const mode = document.getElementById("mode");
+const btnmode = document.getElementById("btnmode")
 
 const songs = [
   'Juice WRLD Ft Benny Blanco - Real Shit',
@@ -25,6 +27,24 @@ let songIndex = 2;
 
 loadSong(songs[songIndex]);
 
+let hrefTo;
+
+document.getElementById("1").onclick = () => {chooseMode(1)};
+document.getElementById("2").onclick = () => {chooseMode(2)};
+document.getElementById("3").onclick = () => {chooseMode(3)};
+document.getElementById("4").onclick = () => {chooseMode(4)};
+
+function chooseMode(mode) {
+  if  (mode == 1){
+    hrefTo = "./rap.html"
+  } else if(mode == 2){
+    hrefTo = "./hiphop.html"
+  }else if(mode == 3){
+    hrefTo = "./reggae.html"
+  } else if(mode == 4){
+    hrefTo = "./charts.html"
+  }
+}
 
 function saveuserinput() {
   const username = document.getElementById("username").value
@@ -36,7 +56,11 @@ function saveuserinput() {
   localStorage.setItem("score", score);
   localStorage.setItem("myImage", myImage)
   localStorage.setItem("username", username);
-  window.location = "./game.html"
+  if (!hrefTo) {
+    alert("Bitte wähle ein Genre aus!")
+  } else {
+    window.location.href = hrefTo;
+  }
   }
 }
 

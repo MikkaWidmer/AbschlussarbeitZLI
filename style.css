@@ -400,7 +400,38 @@ img.track {
     background-color: red;
 }
 
-@media (max-width: 600px) {
+.mode{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 125px 0px 5px 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding:20px 15px 25px 15px;
+    border-radius: 10px;
+    height: 130px;
+    gap: 10px;
+}
+
+.modebtn{
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    color: gray;
+    font-weight:bold;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+}
+
+.modebtn:focus{
+    color: black;
+}
+
+.mode a{
+    height: 0;
+}
+
+@media screen and (max-width: 600px) {
     .center{
         display: flex;
         flex-direction: column;
