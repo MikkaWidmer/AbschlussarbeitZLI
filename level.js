@@ -15,42 +15,33 @@ for (let button of answerButtons) {
     button.addEventListener("click", (event) => levelcorrect(event.target))
 }
 
+const genres = {
+    rap: [
+        'Juice WRLD Ft Benny Blanco - Real Shit',
+        'Lil Baby, Lil Durk ft Rodwave - Rich Off Pain',
+        'Polo G – I Know',
+        'Charlie Puth - Light Switch',
+        'Poschte',
+        'LCone - Chueche feat. Mimiks',
+        'Gascho Prix Nachtverbindig'
+    ],
+    pop: [
+        "pop song 1",
+        "pop song 2",
+        "pop song 3",
+        "pop song 4",
+        "pop song 5",
+        "pop song 6",
+        "pop song 7",
+        "pop song 8"
+    ]
+}
 
-const rap = [
-    'Juice WRLD Ft Benny Blanco - Real Shit',
-    'Lil Baby, Lil Durk ft Rodwave - Rich Off Pain',
-    'Polo G – I Know',
-    'Charlie Puth - Light Switch',
-    'Poschte',
-    'LCone - Chueche feat. Mimiks',
-    'Gascho Prix Nachtverbindig'
-];
-
-const pop = [
-    "pop song 1",
-    "pop song 2",
-    "pop song 3",
-    "pop song 4",
-    "pop song 5",
-    "pop song 6",
-    "pop song 7",
-    "pop song 8"
-];
-
+const genre = window.location.hash.replace("#", "")
 let mode = localStorage.getItem("mode");
-let songs;
+let songs = genres[genre];
 let folder;
 
-function levelsongs(){
-    debugger
-    if(mode=="1"){
-        songs = rap
-        folder = rap
-    } else if(mode=="2"){
-        songs = pop
-    }
-}
-levelsongs()
 const songIndex = Math.floor(Math.random() * songs.length);
 const currentSong = songs[songIndex]
 
@@ -105,7 +96,7 @@ function levelcorrect(pressedButton) {
 
 function loadSong(song, folder) {
     title.innerText = "Wie heisst dieser Song?";
-    audio.src = `./music/${song}.mp3`;
+    audio.src = `./music/${genre}/${song}.mp3`;
     cover.src = `./images/fragezeichen.jpg`;
 }
 

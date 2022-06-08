@@ -2,6 +2,7 @@ const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const modeBtn = document.getElementsByClassName('modebtn');
 
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
@@ -10,8 +11,8 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
-const mode = document.getElementById("mode");
 const btnmode = document.getElementById("btnmode")
+let genre = null;
 
 const songs = [
   'Juice WRLD Ft Benny Blanco - Real Shit',
@@ -27,25 +28,6 @@ let songIndex = 2;
 
 loadSong(songs[songIndex]);
 
-let hrefTo = "";
-
-function chooseMode(mode) {
-  localStorage.setItem("mode", mode);
-  if (mode == "1") {
-    hrefTo = "./game.html"
-    localStorage.setItem("hrefTo", hrefTo);
-  } else if (mode == "2") {
-    hrefTo = "./game.html"
-    localStorage.setItem("hrefTo", hrefTo);
-  } else if (mode == "3") {
-    hrefTo = "./game.html"
-    localStorage.setItem("hrefTo", hrefTo);
-  } else if (mode == "4") {
-    hrefTo = "./game.html"
-    localStorage.setItem("hrefTo", hrefTo);
-  }
-}
-
 function saveuserinput() {
   const username = document.getElementById("username").value
   const myImage = document.getElementById("myImage").src
@@ -56,10 +38,10 @@ function saveuserinput() {
     localStorage.setItem("score", score);
     localStorage.setItem("myImage", myImage)
     localStorage.setItem("username", username);
-    if (hrefTo == "") {
+    if (!genre) {
       alert("Bitte wähle ein Genre aus!")
     } else {
-      window.location.href = hrefTo;
+      window.location.href = `game.html#${genre}`;
     }
   }
 }
@@ -69,7 +51,6 @@ function loadSong(song) {
   audio.src = `music/${song}.mp3`;
   cover.src = `images/${song}.jpg`;
 }
-
 
 function playSong() {
   musicContainer.classList.add('play');
@@ -144,4 +125,12 @@ progressContainer.addEventListener('click', setProgress);
 
 audio.addEventListener('ended', nextSong);
 
-audio.addEventListener('timeupdate', DurTime);
+audio.addEventListener('timeupdate', durTime);
+
+Array.from(modeBtn).forEach(element => {
+  element.addEventListener("click", () => {
+    Array.from(document.getElementsByClassName("chosen")).forEach(element => element.classList.remove("chosen"))
+    element.classList.add("chosen")
+    genre = element.value
+  })
+});
