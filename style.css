@@ -457,4 +457,17 @@ img.track {
     .usernameinput{
         margin-top: 40vh;
     }
+    .congratfield{
+        height: 30vh;
+    }
+    .congratfield p{
+        font-size: 20px;
+        height: 5vh;
+    }
+    .congratfield button{
+        height: 5vh;
+    }
+    #gapbtn{
+        margin-bottom: 2vh;
+    }
 }
