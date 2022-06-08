@@ -104,7 +104,7 @@ function levelcorrect(pressedButton) {
 
 function loadSong(song, folder) {
     title.innerText = "Wie heisst dieser Song?";
-    audio.src = `./${folder}/${song}.mp3`;
+    audio.src = `./music/${song}.mp3`;
     cover.src = `./images/fragezeichen.jpg`;
 }
 
