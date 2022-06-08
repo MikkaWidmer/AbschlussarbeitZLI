@@ -58,11 +58,11 @@ function waitwrong() {
   }
 
 function gonextlvl() {
-    window.location = "./game.html"
+    window.location = "../hiphop.html"
 }
 
 function wronganswer(){
-    window.location ="./congrats.html"
+    window.location ="../congrats.html"
 }
 
 function levelcorrect(pressedButton) {
@@ -79,8 +79,8 @@ function levelcorrect(pressedButton) {
 
 function loadSong(song) {
     title.innerText = "Wie heisst dieser Song?";
-    audio.src = `music/${song}.mp3`;
-    cover.src = `images/fragezeichen.jpg`;
+    audio.src = `../music/${song}.mp3`;
+    cover.src = `../images/fragezeichen.jpg`;
 }
 
 function playSong() {
