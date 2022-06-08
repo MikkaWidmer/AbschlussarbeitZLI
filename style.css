@@ -431,6 +431,10 @@ img.track {
     height: 0;
 }
 
+.mobilemode{
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
     .center{
         display: flex;
@@ -469,5 +473,17 @@ img.track {
     }
     #gapbtn{
         margin-bottom: 2vh;
+    }
+    .mode{
+        display: none;
+    }
+    .mobilemode{
+        display: flex;
+    }
+    #username{
+        width: 98%;
+    }
+    .gamebtn{
+        margin-bottom: 1vh;
     }
 }
