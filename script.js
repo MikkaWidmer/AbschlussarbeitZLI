@@ -36,13 +36,13 @@ document.getElementById("4").onclick = () => {chooseMode(4)};
 
 function chooseMode(mode) {
   if  (mode == 1){
-    hrefTo = "./rap.html"
+    hrefTo = "./genre/rap.html"
   } else if(mode == 2){
-    hrefTo = "./hiphop.html"
+    hrefTo = "./genre/hiphop.html"
   }else if(mode == 3){
-    hrefTo = "./reggae.html"
+    hrefTo = "./genre/reggae.html"
   } else if(mode == 4){
-    hrefTo = "./charts.html"
+    hrefTo = "./genre/charts.html"
   }
 }
 
