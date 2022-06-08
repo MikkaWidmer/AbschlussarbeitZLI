@@ -243,6 +243,7 @@ img.track {
     border: 0;
     outline: none;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .gamebtn a{
@@ -445,10 +446,10 @@ img.track {
     .landingPagegame{
         display: flex;
         flex-direction: column;
-        gap: 0;
-        padding-top: 20vh;
+        gap: 5px;
+        padding-top: 10vh;
         padding-bottom: 0;
-        height: 30vh;
+        height: 50vh;
     }
     .music-container{
         width: 98%;
@@ -480,11 +481,5 @@ img.track {
     }
     .gamebtn{
         margin-bottom: 1vh;
-    }
-    .landingPagegame{
-        flex-direction: column;
-        padding-top: 10vh;
-        height: 47vh;
-        gap: 5px;
     }
 }

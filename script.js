@@ -27,22 +27,21 @@ let songIndex = 2;
 
 loadSong(songs[songIndex]);
 
-let hrefTo;
-
-document.getElementById("1").onclick = () => {chooseMode(1)};
-document.getElementById("2").onclick = () => {chooseMode(2)};
-document.getElementById("3").onclick = () => {chooseMode(3)};
-document.getElementById("4").onclick = () => {chooseMode(4)};
+let hrefTo = "";
 
 function chooseMode(mode) {
-  if  (mode == 1){
+  if (mode == "1") {
     hrefTo = "./genre/rap.html"
-  } else if(mode == 2){
+    localStorage.setItem("hrefTo", hrefTo);
+  } else if (mode == "2") {
     hrefTo = "./genre/hiphop.html"
-  }else if(mode == 3){
+    localStorage.setItem("hrefTo", hrefTo);
+  } else if (mode == "3") {
     hrefTo = "./genre/reggae.html"
-  } else if(mode == 4){
+    localStorage.setItem("hrefTo", hrefTo);
+  } else if (mode == "4") {
     hrefTo = "./genre/charts.html"
+    localStorage.setItem("hrefTo", hrefTo);
   }
 }
 
@@ -53,14 +52,14 @@ function saveuserinput() {
   if (username == "") {
     alert("!sie müssen einen Username wählen")
   } else {
-  localStorage.setItem("score", score);
-  localStorage.setItem("myImage", myImage)
-  localStorage.setItem("username", username);
-  if (!hrefTo) {
-    alert("Bitte wähle ein Genre aus!")
-  } else {
-    window.location.href = hrefTo;
-  }
+    localStorage.setItem("score", score);
+    localStorage.setItem("myImage", myImage)
+    localStorage.setItem("username", username);
+    if (hrefTo == "") {
+      alert("Bitte wähle ein Genre aus!")
+    } else {
+      window.location.href = hrefTo;
+    }
   }
 }
 
