@@ -423,7 +423,8 @@ img.track {
 }
 
 .modebtn:focus{
-    color: black;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .mode a{
@@ -432,6 +433,16 @@ img.track {
 
 .mobilemode{
     display: none;
+}
+
+.chosengenre{
+    color: black;
+    background-color: #8a8a8a;
+}
+
+.modebtn:hover{
+    color: black;
+    background-color: #bababa;
 }
 
 @media screen and (max-width: 600px) {

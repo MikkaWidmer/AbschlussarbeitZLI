@@ -70,6 +70,7 @@ function loadSong(song) {
   cover.src = `images/${song}.jpg`;
 }
 
+
 function playSong() {
   musicContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.remove('fa-play');
