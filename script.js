@@ -32,16 +32,16 @@ let hrefTo = "";
 function chooseMode(mode) {
   localStorage.setItem("mode", mode);
   if (mode == "1") {
-    hrefTo = "./genre/game.html"
+    hrefTo = "./game.html"
     localStorage.setItem("hrefTo", hrefTo);
   } else if (mode == "2") {
-    hrefTo = "./genre/game.html"
+    hrefTo = "./game.html"
     localStorage.setItem("hrefTo", hrefTo);
   } else if (mode == "3") {
-    hrefTo = "./genre/game.html"
+    hrefTo = "./game.html"
     localStorage.setItem("hrefTo", hrefTo);
   } else if (mode == "4") {
-    hrefTo = "./genre/game.html"
+    hrefTo = "./game.html"
     localStorage.setItem("hrefTo", hrefTo);
   }
 }

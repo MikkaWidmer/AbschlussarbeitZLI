@@ -24,13 +24,14 @@ const rap = [
     'LCone - Chueche feat. Mimiks',
     'Gascho Prix Nachtverbindig'
 ];
+let mode = localStorage.getItem("mode");
 let songs;
 let folder;
 
 function levelsongs(){
+    debugger
     if(mode=1){
         songs = rap
-        folder = rap
     }
 }
 levelsongs()
@@ -43,7 +44,7 @@ populateAnswers(currentSong);
 document.getElementById("username").innerText = localStorage.getItem("username");
 document.getElementById("score").innerText = localStorage.getItem("score");
 document.getElementById("myImage").src = localStorage.getItem("myImage");
-document.getElementById("mode").innerText = localStorage.getItem("mode");
+
 
 function shuffle(list) {
     return Array.from(list).sort((a, b) => 0.5 - Math.random());
@@ -86,9 +87,9 @@ function levelcorrect(pressedButton) {
     }
 }
 
-function loadSong(song) {
+function loadSong(song, folder) {
     title.innerText = "Wie heisst dieser Song?";
-    audio.src = `./${folder}/${song}.mp3`;
+    audio.src = `./music/${song}.mp3`;
     cover.src = `./images/fragezeichen.jpg`;
 }
 
