@@ -55,14 +55,14 @@ function wait() {
 
 function waitwrong() {
     timeout = setTimeout(wronganswer, 300);
-  }
+}
 
 function gonextlvl() {
     window.location = "./charts.html"
 }
 
 function wronganswer(){
-    window.location ="./congrats.html"
+    window.location ="../congrats.html"
 }
 
 function levelcorrect(pressedButton) {
