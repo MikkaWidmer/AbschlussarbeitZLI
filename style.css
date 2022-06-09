@@ -486,6 +486,11 @@ img.track {
     }
     .mobilemode{
         display: flex;
+        gap: 1px;
+    }
+    .modebtn{
+        height: 57px;
+        width: 57px;
     }
     #username{
         width: 98%;
