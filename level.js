@@ -54,14 +54,14 @@ const genres = {
         'Gascho Prix Nachtverbindig'
     ],
     pop: [
-        "pop song 1",
-        "pop song 2",
-        "pop song 3",
-        "pop song 4",
-        "pop song 5",
-        "pop song 6",
-        "pop song 7",
-        "pop song 8"
+        'Ariana Grande - Into You',
+        'The Wanted - Glad You Came',
+        'P!nk - Who Knew',
+        'Flo Rida - My House',
+        'Katy Perry - Hot N Cold',
+        'Justin Bieber - Peaches',
+        'Sara Bareilles - Love Song',
+        'Selena Gomez - Love You Like a Love Song',
     ]
 }
 
