@@ -161,7 +161,7 @@ function wait() {
 }
 
 function waitwrong() {
-    timeout = setTimeout(wronganswer, 300);
+    timeout = setTimeout(wronganswer, 900);
 }
 
 function gonextlvl() {
@@ -180,11 +180,20 @@ function levelcorrect(pressedButton) {
         wait()
     } else {
         pressedButton.classList.add("wronganswer")
+        loadrightSong()
         waitwrong()
     }
 }
 
-function loadSong(song, folder) {
+function loadrightSong(song) {
+    debugger
+    alert(`Right Answer:  ${currentSong}`);
+    title.innerText = currentSong
+    audio.src = `./music/${genre}/${song}.mp3`;
+    cover.src = `./images/fragezeichen.jpg`;
+}
+
+function loadSong(song) {
     title.innerText = "Wie heisst dieser Song?";
     audio.src = `./music/${genre}/${song}.mp3`;
     cover.src = `./images/fragezeichen.jpg`;

@@ -236,14 +236,15 @@ img.track {
 }
 
 .gamebtn {
-    width: 100%;
-    height: 30px;
-    border-radius: 7px;
+    width: 590px;
+    height: 20vh;
+    border-radius: 50px;
     background-color: #805c3d;
     border: 0;
     outline: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    padding: 10px;
 }
 
 .gamebtn a{
@@ -498,5 +499,6 @@ img.track {
     }
     .gamebtn{
         margin-bottom: 1vh;
+        width: 400px;
     }
 }
