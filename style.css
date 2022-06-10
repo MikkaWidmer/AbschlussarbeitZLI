@@ -167,8 +167,8 @@ img.track {
     justify-content: flex-start;
     gap: 125px;
     align-items: center;
-    height: 50vh;
     flex-direction: row;
+    margin-top: 10vh;
 }
 
 .landingPage {
@@ -463,7 +463,7 @@ img.track {
         gap: 5px;
         padding-top: 10vh;
         padding-bottom: 0;
-        height: 50vh;
+        margin-top: 0;
     }
     .music-container{
         width: 98%;
