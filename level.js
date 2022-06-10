@@ -186,7 +186,6 @@ function levelcorrect(pressedButton) {
 }
 
 function loadrightSong(song) {
-    debugger
     alert(`Right Answer:  ${currentSong}`);
     title.innerText = currentSong
     audio.src = `./music/${genre}/${song}.mp3`;
