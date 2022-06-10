@@ -109,7 +109,7 @@ const genres = {
         'Polo G – I Know',
         'Poschte',
         'Drake - Gods Plan',
-    ]
+    ],
     pop: [
         'Kygo, Selena Gomez – It Aint Me',
         'Ariana Grande - Into You',
