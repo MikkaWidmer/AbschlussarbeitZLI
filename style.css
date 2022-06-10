@@ -455,6 +455,7 @@ img.track {
     .answer{
         width: 98%;
         max-width: 98%;
+        color: black;
     }
     .landingPagegame{
         display: flex;
