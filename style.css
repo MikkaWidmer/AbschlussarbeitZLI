@@ -272,6 +272,7 @@ img.track {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    margin-top: 2vh;
 }
 
 .answer {
