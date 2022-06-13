@@ -183,10 +183,6 @@ function wait() {
     timeout = setTimeout(gonextlvl, 300);
 }
 
-function waitwrong() {
-    timeout = setTimeout(wronganswer, 900);
-}
-
 function gonextlvl() {
     location.reload();
 }
@@ -204,7 +200,7 @@ function levelcorrect(pressedButton) {
     } else {
         pressedButton.classList.add("wronganswer")
         loadrightSong()
-        waitwrong()
+        wronganswer()
     }
 }
 
