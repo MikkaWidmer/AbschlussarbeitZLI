@@ -203,8 +203,6 @@ function levelcorrect(pressedButton) {
 function loadrightSong(song) {
     alert(`Right Answer:  ${currentSong}`);
     title.innerText = currentSong
-    audio.src = `./music/${genre}/${song}.mp3`;
-    cover.src = `./images/fragezeichen.jpg`;
 }
 
 function loadSong(song) {
