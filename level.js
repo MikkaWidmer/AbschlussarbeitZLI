@@ -187,10 +187,6 @@ function gonextlvl() {
     location.reload();
 }
 
-function wronganswer() {
-    window.location = "./congrats.html"
-}
-
 function levelcorrect(pressedButton) {
     if (pressedButton.innerText == currentSong) {
         let score = document.getElementById("score").innerText = localStorage.getItem("score");
@@ -200,7 +196,7 @@ function levelcorrect(pressedButton) {
     } else {
         pressedButton.classList.add("wronganswer")
         loadrightSong()
-        wronganswer()
+        window.location = "./congrats.html"
     }
 }
 
