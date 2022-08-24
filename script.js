@@ -14,6 +14,13 @@ const durTime = document.querySelector('#durTime');
 const btnmode = document.getElementById("btnmode")
 let genre = null;
 
+loaduserinput()
+
+function loaduserinput() {
+  document.getElementById("username").value = localStorage.getItem("username");
+  document.getElementById("myImage").src = localStorage.getItem("myImage");
+}
+
 function saveuserinput() {
   const username = document.getElementById("username").value
   const myImage = document.getElementById("myImage").src
